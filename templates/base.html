@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <style type="text/css">
+            .error {
+                color: red;
+                font-style : italic;
+            }
+        </style>
+    </head>
+    <body>
+	    <h5>
+            <span><a href="/">Home</a></span><span style="color : white"> --- </span><span><a href="/blog">All Posts</a></span><span style="color : white"> --- </span><span><a href="/blog/newpost">New Post</a></span><span style="color : white"> ------------------------------------------------------ </span><span><a href="/blog/login">Login</a></span><span style="color : white"> --- </span><span><a href="/blog/logout">Logout</a></span>
+        </h5>
+
+        {% block content %}
+        {% endblock %}
+    
+    </body>
+</html>

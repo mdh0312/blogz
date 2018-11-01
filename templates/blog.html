@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Blog Posts!</h1>
+
+{% if posts|length == 0 %}
+<p>No posts yet</p>
+{% else %}
+
+  {% for post in posts %}
+  <div>
+    <h3><a href="/blog?id={{ post.id }}">{{ post.title }}</a></h3>
+    <p>{{ post.body }}</p>
+    <span style = "font-style : italic ; font-size: 12px">Written by 
+      <a href="/?user={{ post.user_id }}">{{ post.user.username }}</a></span>
+	</div>
+	<hr />
+  {% endfor %}
+
+{% endif %}
+
+{% endblock %}
